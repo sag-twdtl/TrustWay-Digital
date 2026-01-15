@@ -3,234 +3,768 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrustWay Digital - Verified Digital Services</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TrustWay Digital | Verified Digital Services for Forms & Documentation</title>
+    <meta name="description" content="Professional digital services for government forms, job applications, document processing, and creative designs. 100% accurate, verified services.">
+    <meta name="keywords" content="government forms, job applications, digital services, document processing, form filling, Uttarakhand">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/919286224731" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <span class="announcement-text">
+                <i class="fas fa-bullhorn"></i> 
+                <strong>New:</strong> SSC CGL 2026 Forms Opening Soon | 
+                <a href="opportunities.html">View All Opportunities →</a>
+            </span>
+            <div class="announcement-controls">
+                <button class="lang-switch" id="langToggle">
+                    <i class="fas fa-language"></i> हिंदी
+                </button>
+                <button class="theme-switch" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
-    <!-- Header & Navigation -->
-    <header>
-        <nav class="navbar">
-            <div class="logo-container">
-                <img src="Trustwaydigital-logo.png" alt="TrustWay Digital Logo" class="logo">
-                <span class="brand-name">TrustWay Digital</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="proof.html">Proof & Authenticity</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-contact">
-                <a href="tel:9286224731" class="call-btn"><i class="fas fa-phone"></i> 9286224731</a>
-            </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-        <!-- नया item जोड़ें -->
-<li><a href="founder.html">Our Founder</a></li>
+    <!-- Professional Header -->
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <!-- Logo -->
+                <div class="nav-brand">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-icon">
+                            <i class="fas fa-feather-alt"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-primary">TrustWay</span>
+                            <span class="logo-secondary">Digital</span>
+                        </div>
+                    </a>
+                </div>
 
-<!-- Complete navigation order: -->
-1. Home
-2. Services
-3. Opportunities 2026
-4. Our Founder ✓
-5. Proof & Authenticity
-6. Gallery
-7. Contact
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="services.html" class="nav-link">
+                            <i class="fas fa-tasks"></i> Services
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="services.html#government" class="dropdown-item">
+                                <i class="fas fa-file-contract"></i> Government Forms
+                            </a>
+                            <a href="services.html#education" class="dropdown-item">
+                                <i class="fas fa-graduation-cap"></i> Education Forms
+                            </a>
+                            <a href="services.html#documents" class="dropdown-item">
+                                <i class="fas fa-file-alt"></i> Documents
+                            </a>
+                            <a href="services.html#design" class="dropdown-item">
+                                <i class="fas fa-palette"></i> Design Services
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="opportunities.html" class="nav-link">
+                            <i class="fas fa-briefcase"></i> Opportunities
+                            <span class="badge-new">2026</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="founder.html" class="nav-link">
+                            <i class="fas fa-user-tie"></i> Our Founder
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">
+                            <i class="fas fa-images"></i> Gallery
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">
+                            <i class="fas fa-phone-alt"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Call to Action -->
+                <div class="nav-actions">
+                    <a href="tel:9286224731" class="btn-call">
+                        <i class="fas fa-phone"></i>
+                        <span class="call-text">9286224731</span>
+                    </a>
+                    <a href="https://wa.me/919286224731" class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">TrustWay Digital</h1>
-            <h2 class="hero-subtitle">Verified Digital Services for Forms, Jobs & Documentation</h2>
-            <p class="hero-text">Safe, accurate and error-free support for government forms, education forms, bio-data and digital work.</p>
-            <div class="hero-buttons">
-                <a href="https://wa.me/919286224731" class="btn-primary" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Now
-                </a>
-                <a href="tel:9286224731" class="btn-secondary">
-                    <i class="fas fa-phone"></i> Call: 9286224731
-                </a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="image-placeholder">
-                <i class="fas fa-laptop-code"></i>
-                <p>Professional Digital Services</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section">
+    <section class="hero-section">
         <div class="container">
-            <h2 class="section-title">About TrustWay Digital</h2>
-            <div class="about-content">
-                <p>TrustWay Digital is a local digital service focused on <strong>accuracy, transparency and responsible work</strong>.</p>
-                <p>We help people complete online forms and digital tasks correctly, so they avoid rejection, delays and unnecessary stress.</p>
-                <div class="about-highlight">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <p><strong>We do not promise selection or results.</strong> We believe in correct process and verified information.</p>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-verified">
+                        <i class="fas fa-shield-check"></i> 100% Verified Services
+                    </span>
+                </div>
+                <h1 class="hero-title">
+                    Professional Digital Services for
+                    <span class="highlight">Forms, Jobs & Documentation</span>
+                </h1>
+                <p class="hero-description">
+                    TrustWay Digital provides accurate, error-free support for government forms, 
+                    education applications, bio-data, and digital documentation. 
+                    <strong>No fake promises. Just verified work.</strong>
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">Forms Processed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="100">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="99">0</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">Hour Support</div>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="https://wa.me/919286224731" class="btn-primary btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Start WhatsApp Chat
+                    </a>
+                    <a href="services.html" class="btn-secondary btn-large">
+                        <i class="fas fa-eye"></i> View Our Services
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <i class="fas fa-file-contract"></i>
+                    <h4>Government Forms</h4>
+                    <p>SSC, UPSC, Railway, Banking</p>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Education</h4>
+                    <p>CUET, Admissions, Scholarships</p>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Documents</h4>
+                    <p>Resume, Bio-data, CV</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Overview -->
-    <section class="services-section">
+    <!-- Trust Indicators -->
+    <section class="trust-section">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verified Work</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Data Secure</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-file-invoice"></i>
+                    <span>Proper Bills</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Uttarakhand Based</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Professional Services</h2>
+                <p class="section-subtitle">Comprehensive digital solutions for all your needs</p>
+            </div>
+            
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-file-contract"></i>
                     </div>
-                    <h3>Government Job Form Filling</h3>
-                    <p>CUET, SSC, Navy, Railway, Post Office Forms</p>
-                    <a href="services.html" class="service-link">View Details →</a>
+                    <h3 class="service-title">Government Job Forms</h3>
+                    <p class="service-description">
+                        SSC, UPSC, Railway, Banking, Army, Navy, Police, and all government job applications.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 100% Accuracy</li>
+                        <li><i class="fas fa-check"></i> Document Verification</li>
+                        <li><i class="fas fa-check"></i> Photo & Signature Formatting</li>
+                    </ul>
+                    <a href="services.html#government" class="service-link">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3>Scholarship & Education Forms</h3>
-                    <p>College admission, scholarship applications</p>
-                    <a href="services.html" class="service-link">View Details →</a>
+                    <h3 class="service-title">Education Forms</h3>
+                    <p class="service-description">
+                        CUET, College Admissions, Scholarship Applications, and all education-related forms.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Correct Detail Entry</li>
+                        <li><i class="fas fa-check"></i> Document Checking</li>
+                        <li><i class="fas fa-check"></i> Re-submission Support</li>
+                    </ul>
+                    <a href="services.html#education" class="service-link">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-user-tie"></i>
                     </div>
-                    <h3>Bio-Data & Resume</h3>
-                    <p>Marriage bio-data, CV formatting, document correction</p>
-                    <a href="services.html" class="service-link">View Details →</a>
+                    <h3 class="service-title">Bio-Data & Documents</h3>
+                    <p class="service-description">
+                        Marriage Bio-data, Professional Resume, CV Formatting, and document correction services.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Professional Formatting</li>
+                        <li><i class="fas fa-check"></i> Error Correction</li>
+                        <li><i class="fas fa-check"></i> Multiple Formats</li>
+                    </ul>
+                    <a href="services.html#documents" class="service-link">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
+
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-palette"></i>
                     </div>
-                    <h3>Poster & Creative Design</h3>
-                    <p>Posters, visiting cards, social media creatives</p>
-                    <a href="services.html" class="service-link">View Details →</a>
+                    <h3 class="service-title">Creative Design Services</h3>
+                    <p class="service-description">
+                        Posters, Visiting Cards, Social Media Creatives, and branding design services.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Custom Designs</li>
+                        <li><i class="fas fa-check"></i> Brand Consistency</li>
+                        <li><i class="fas fa-check"></i> Quick Turnaround</li>
+                    </ul>
+                    <a href="services.html#design" class="service-link">
+                        View Details <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
+            
             <div class="text-center">
-                <a href="services.html" class="btn-primary">View All Services</a>
+                <a href="services.html" class="btn-primary">
+                    <i class="fas fa-list"></i> View All Services
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Why Trust Us -->
-    <section class="trust-section">
+    <!-- Why Choose Us -->
+    <section class="features-section">
         <div class="container">
-            <h2 class="section-title">Why TrustWay Digital?</h2>
-            <div class="trust-points">
-                <div class="trust-point">
-                    <div class="trust-icon">
-                        <i class="fas fa-check-circle"></i>
+            <div class="section-header">
+                <h2 class="section-title">Why TrustWay Digital?</h2>
+                <p class="section-subtitle">The professional choice for digital services</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon success">
+                        <i class="fas fa-check-double"></i>
                     </div>
-                    <h3>Verified and Error-Free Work</h3>
-                    <p>Every form and document checked multiple times for accuracy</p>
+                    <h3>Verified Accuracy</h3>
+                    <p>Every form and document is checked multiple times for 100% accuracy and compliance.</p>
                 </div>
-                <div class="trust-point">
-                    <div class="trust-icon">
-                        <i class="fas fa-handshake"></i>
+                
+                <div class="feature-card">
+                    <div class="feature-icon primary">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Data Security</h3>
+                    <p>Your personal information is kept secure and confidential. We never share client data.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon warning">
+                        <i class="fas fa-ban"></i>
                     </div>
                     <h3>No Fake Promises</h3>
-                    <p>We guarantee correct process, not selection or results</p>
+                    <p>We guarantee correct process, not selection. Honest and transparent services.</p>
                 </div>
-                <div class="trust-point">
-                    <div class="trust-icon">
+                
+                <div class="feature-card">
+                    <div class="feature-icon info">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Proper Documentation</h3>
+                    <p>Every service includes proper bills, receipts, and digital stamps for accountability.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon secondary">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock support via WhatsApp, Phone, and Email for urgent requirements.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon accent">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3>Local Support (Uttarakhand)</h3>
-                    <p>Based in Karnprayag - Haridwar Road, Jaakh</p>
-                </div>
-                <div class="trust-point">
-                    <div class="trust-icon">
-                        <i class="fas fa-receipt"></i>
-                    </div>
-                    <h3>Proper Receipt & Record</h3>
-                    <p>Digital stamp, invoice system for every service</p>
+                    <h3>Local Presence</h3>
+                    <p>Based in Uttarakhand, we understand local requirements and provide personalized service.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
+    <!-- Current Opportunities -->
+    <section class="opportunities-section">
         <div class="container">
-            <h2 class="section-title">Contact TrustWay Digital</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <div>
-                        <h3>WhatsApp/Call</h3>
-                        <p><a href="https://wa.me/919286224731">9286224731</a></p>
+            <div class="section-header">
+                <h2 class="section-title">Current Opportunities</h2>
+                <p class="section-subtitle">Active job vacancies and important deadlines</p>
+            </div>
+            
+            <div class="opportunities-grid">
+                <div class="opportunity-card urgent">
+                    <div class="opportunity-header">
+                        <span class="opportunity-badge">Urgent</span>
+                        <span class="opportunity-days">15 days left</span>
+                    </div>
+                    <h3 class="opportunity-title">RRB Group D 2026</h3>
+                    <p class="opportunity-description">22,000+ vacancies for 10th pass candidates</p>
+                    <div class="opportunity-details">
+                        <div class="detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Last Date: 20 Feb 2026</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-rupee-sign"></i>
+                            <span>Fee: ₹500</span>
+                        </div>
+                    </div>
+                    <a href="opportunities.html" class="opportunity-link">
+                        Apply Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="opportunity-card active">
+                    <div class="opportunity-header">
+                        <span class="opportunity-badge">Active</span>
+                        <span class="opportunity-days">30 days left</span>
+                    </div>
+                    <h3 class="opportunity-title">CUET UG 2026</h3>
+                    <p class="opportunity-description">Central University Entrance Test for Graduation</p>
+                    <div class="opportunity-details">
+                        <div class="detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Last Date: 30 Jan 2026</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-rupee-sign"></i>
+                            <span>Fee: ₹800</span>
+                        </div>
+                    </div>
+                    <a href="opportunities.html" class="opportunity-link">
+                        Apply Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="opportunity-card upcoming">
+                    <div class="opportunity-header">
+                        <span class="opportunity-badge">Upcoming</span>
+                        <span class="opportunity-days">Coming Soon</span>
+                    </div>
+                    <h3 class="opportunity-title">SSC CGL 2026</h3>
+                    <p class="opportunity-description">Graduate level government jobs through SSC</p>
+                    <div class="opportunity-details">
+                        <div class="detail-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>Expected: March 2026</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-rupee-sign"></i>
+                            <span>Fee: ₹100</span>
+                        </div>
+                    </div>
+                    <a href="opportunities.html" class="opportunity-link">
+                        Get Notified <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="opportunities.html" class="btn-secondary">
+                    <i class="fas fa-calendar-alt"></i> View All Opportunities
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real feedback from students and job seekers</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"TrustWay Digital helped me fill my SSC CHSL form perfectly. They checked every detail and even helped with document formatting. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Rahul Sharma</h4>
+                            <p>SSC Aspirant | Dehradun</p>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h3>Email</h3>
-                        <p><a href="mailto:trustwaydigital@gmail.com">trustwaydigital@gmail.com</a></p>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Professional service for my marriage bio-data. They created a beautiful, well-organized profile that impressed everyone. Thank you TrustWay!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Singh</h4>
+                            <p>Matrimonial Profile | Rudraprayag</p>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h3>Location</h3>
-                        <p>Karnprayag – Haridwar Road, Jaakh, Uttarakhand</p>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"CUET form filling was done with 100% accuracy. They explained every step and ensured all documents were correct. Great support team!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Amit Joshi</h4>
+                            <p>CUET Applicant | Karnprayag</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="All file watermark.png" alt="TrustWay Digital Logo" class="footer-logo-img">
-                <h3>TrustWay Digital</h3>
-                <p>Verified Digital Services</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="proof.html">Proof & Authenticity</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <p><i class="fab fa-whatsapp"></i> 9286224731</p>
-                <p><i class="fas fa-envelope"></i> trustwaydigital@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Karnprayag, Uttarakhand</p>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Get Started?</h2>
+                <p class="cta-description">
+                    Contact us now for professional, verified digital services. 
+                    We ensure 100% accuracy and complete satisfaction.
+                </p>
+                
+                <div class="cta-buttons">
+                    <a href="https://wa.me/919286224731" class="btn-primary btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Now
+                    </a>
+                    <a href="tel:9286224731" class="btn-secondary btn-large">
+                        <i class="fas fa-phone"></i> Call: 9286224731
+                    </a>
+                    <a href="contact.html" class="btn-outline btn-large">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                </div>
+                
+                <div class="cta-features">
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <span>24/7 Support Available</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-check"></i>
+                        <span>100% Verified Service</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Proper Bills & Receipts</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 TrustWay Digital. All rights reserved. | Designed by TrustWay Digital</p>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-feather-alt"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-primary">TrustWay</span>
+                            <span class="logo-secondary">Digital</span>
+                        </div>
+                    </a>
+                    <p class="footer-description">
+                        Professional digital services for forms, jobs, and documentation. 
+                        100% accurate, verified, and reliable.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://wa.me/919286224731" class="social-link whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://facebook.com" class="social-link facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" class="social-link instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:trustwaydigital@gmail.com" class="social-link email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-menu">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="services.html"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="opportunities.html"><i class="fas fa-chevron-right"></i> Opportunities 2026</a></li>
+                        <li><a href="founder.html"><i class="fas fa-chevron-right"></i> Our Founder</a></li>
+                        <li><a href="proof.html"><i class="fas fa-chevron-right"></i> Proof & Authenticity</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3 class="footer-heading">Our Services</h3>
+                    <ul class="footer-menu">
+                        <li><a href="services.html#government"><i class="fas fa-chevron-right"></i> Government Forms</a></li>
+                        <li><a href="services.html#education"><i class="fas fa-chevron-right"></i> Education Forms</a></li>
+                        <li><a href="services.html#documents"><i class="fas fa-chevron-right"></i> Bio-data & Resume</a></li>
+                        <li><a href="services.html#design"><i class="fas fa-chevron-right"></i> Design Services</a></li>
+                        <li><a href="services.html#correction"><i class="fas fa-chevron-right"></i> Document Correction</a></li>
+                        <li><a href="services.html#consultation"><i class="fas fa-chevron-right"></i> Consultation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone / WhatsApp</h4>
+                                <a href="tel:9286224731">9286224731</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Address</h4>
+                                <a href="mailto:trustwaydigital@gmail.com">trustwaydigital@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Karnprayag – Haridwar Road, Jaakh, Uttarakhand</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Mon-Sat: 9 AM - 8 PM<br>Sun: 10 AM - 6 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 TrustWay Digital. All rights reserved. | Designed by TrustWay Digital 🪶</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- WhatsApp Chat Widget -->
+    <div class="whatsapp-widget">
+        <div class="widget-header">
+            <div class="widget-avatar">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="widget-info">
+                <h4>TrustWay Digital</h4>
+                <p>Typically replies within minutes</p>
+            </div>
+            <button class="widget-close" id="widgetClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="widget-body">
+            <p>Hi! 👋 How can we help you today?</p>
+            <div class="widget-options">
+                <button class="widget-option" data-message="I need help with form filling">
+                    Form Filling Help
+                </button>
+                <button class="widget-option" data-message="I want to know about your services">
+                    View Services
+                </button>
+                <button class="widget-option" data-message="I need document correction service">
+                    Document Correction
+                </button>
+            </div>
+        </div>
+        <div class="widget-input">
+            <input type="text" placeholder="Type your message..." id="widgetInput">
+            <button class="widget-send" id="widgetSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919286224731" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span class="float-text">Chat with us</span>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="js/script.js"></script>
+    <script>
+        // Initialize counters
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animated counters
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const increment = target / 100;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+            
+            // Theme toggle
+            const themeToggle = document.getElementById('themeToggle');
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                const icon = this.querySelector('i');
+                if (document.body.classList.contains('dark-mode')) {
+                    icon.className = 'fas fa-sun';
+                } else {
+                    icon.className = 'fas fa-moon';
+                }
+            });
+            
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            
+            // Back to top
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+            
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
-</html>
+    </html>
