@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work Gallery - TrustWay Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Gallery Hero Section */
+        .gallery-hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .gallery-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .gallery-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Filter Section */
+        .filter-section {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+        
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .filter-title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            font-size: 1.3rem;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .filter-btn {
+            padding: 12px 30px;
+            background: white;
+            border: 2px solid #3498db;
+            border-radius: 30px;
+            color: #3498db;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+        
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            border: 1px solid #eee;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .image-container {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .gallery-item:hover .image-container img {
+            transform: scale(1.1);
+        }
+        
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .image-overlay {
+            transform: translateY(0);
+        }
+        
+        .item-info {
+            padding: 25px;
+        }
+        
+        .item-info h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .item-info p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .item-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .tag {
+            background: #e8f4fd;
+            color: #3498db;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        /* Document Samples */
+        .document-sample {
+            height: 220px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .document-sample i {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Privacy Notice */
+        .privacy-notice {
+            background: #fff8e1;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 40px auto;
+            max-width: 1200px;
+            border-left: 5px solid #ffc107;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .privacy-notice i {
+            color: #ff9800;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        
+        /* CTA Section */
+        .gallery-cta {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .gallery-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .gallery-cta p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }
+            
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .filter-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-hero {
+                padding: 60px 20px;
+            }
+            
+            .item-info {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919286224731" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="Trustwaydigital-logo.png" alt="TrustWay Digital Logo" class="logo">
+                <span class="brand-name">TrustWay Digital</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="opportunities.html">Opportunities 2026</a></li>
+                <li><a href="founder.html">Our Founder</a></li>
+                <li><a href="proof.html">Proof & Authenticity</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-contact">
+                <a href="tel:9286224731" class="call-btn"><i class="fas fa-phone"></i> 9286224731</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Our Professional Work Gallery</h1>
+            <p>Explore our portfolio of verified digital work - Job Posters, Social Media Creatives, Branding Designs, and Professional Documents</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <h3 class="filter-title">Filter by Category</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Work</button>
+                <button class="filter-btn" data-filter="posters">Job Posters</button>
+                <button class="filter-btn" data-filter="creatives">Social Media</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="documents">Documents</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <div class="gallery-grid">
+        <!-- Job Poster 1 -->
+        <div class="gallery-item posters">
+            <div class="image-container">
+                <img src="file_00000000af5871fa964f41eb6ece9c2f.png" alt="Government Job Poster Design">
+                <div class="image-overlay">
+                    <h4>Job Poster Design</h4>
+                    <p>Professional recruitment poster</p>
+                </div>
+            </div>
+            <div class="item-info">
+                <h3>Government Job Recruitment Poster</h3>
+                <p>Professional poster design for government job vacancies with clear information hierarchy and visual appeal</p>
+                <div class="item-tags">
+                    <span class="tag">Job Poster</span>
+                    <span class="tag">Recruitment</span>
+                    <span class="tag">Government</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Creative 1 -->
+        <div class="gallery-item creatives">
+            <div class="image-container">
+                <img src="file_00000000503472079a6a995e76df40de.png" alt="Festival Greeting WhatsApp Status">
+                <div class="image-overlay">
+                    <h4>Festival Status</h4>
+                    <p>WhatsApp Status Design</p>
+                </div>
+            </div>
+            <div class="item-info">
+                <h3>Festival Greeting WhatsApp Status</h3>
+                <p>Colorful and engaging WhatsApp status design for festival celebrations with cultural elements</p>
+                <div class="item-tags">
+                    <span class="tag">WhatsApp</span>
+                    <span class="tag">Festival</span>
+                    <span class="tag">Status</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visiting Card -->
+        <div class="gallery-item branding">
+            <div class="image-container">
+                <img src="Visiting-card-frount.png" alt="Professional Visiting Card Design">
+                <div class="image-overlay">
+                    <h4>Visiting Card</h4>
+                    <p>Front Design</p>
+                </div>
+            </div>
+            <div class="item-info">
+                <h3>Business Visiting Card Design</h3>
+                <p>Professional visiting card with modern design, clear contact information, and brand identity</p>
+                <div class="item-tags">
+                    <span class="tag">Business Card</span>
+                    <span class="tag">Branding</span>
+                    <span class="tag">Professional</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Poster 2 -->
+        <div class="gallery-item posters">
+            <div class="image-container">
+                <img src="file_000000006ac87208984b8b2a028ea52a.png" alt="Education Coaching Poster">
+                <div class="image-overlay">
+                    <h4>Coaching Poster</h4>
+                    <p>Admission Open</p>
+                </div>
+            </div>
+            <div class="item-info">
+                <h3>Educational Coaching Poster</h3>
+                <p>Poster design for coaching institute admissions with clear call-to-action and course details</p>
+                <div class="item-tags">
+                    <span class="tag">Education</span>
+                    <span class="tag">Coaching</span>
+                    <span class="tag">Poster</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Digital Seal -->
+        <div class="gallery-item branding">
+            <div class="image-container">
+                <img src="TrustWay-Digital-seal.png" alt="Official Digital Seal">
+                <div class="image-overlay">
+                    <h4>Digital Seal</h4>
+                    <p>Official Stamp</p>
+                </div>
+            </div>
+            <div class="item-info">
+                <h3>Official Digital Seal & Stamp</h3>
+                <p>Professional digital seal used on official documents, bills, and certificates for authentication</p>
+                <div class="item-tags">
+                    <span class="tag">Seal</span>
+                    <span class="tag">Official</span>
+                    <span class="tag">Stamp</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instagram Post -->
+        <div class="gallery-item creatives">
+            <div class="image-container">
+                <img src="file_000000006d3472068a9f38a5a7b20a29.png" alt="Instagram Social Media Post">
+                <div class="image-overlay">
+                    <h4>Instagram Post</h4>
+                    <p>Social Media Design</p>
+                </div>
+            </div>
+            <div class="item-info">
+                <h3>Instagram Business Post Design</h3>
+                <p>Engaging Instagram post design for business promotion with visual appeal and clear messaging</p>
+                <div class="item-tags">
+                    <span class="tag">Instagram</span>
+                    <span class="tag">Social Media</span>
+                    <span class="tag">Marketing</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visiting Card Back -->
+        <div class="gallery-item branding">
+            <div class="image-container">
+                <img src="Visiting-card-frount-and-back.png" alt="Visiting Card Front and Back">
+                <div class="image-overlay">
+                    <h4>Card Complete</h4>
+                    <p>Front & Back Design</p>
+                </div>
+            </div>
+            <div class="item-info">
+                <h3>Complete Visiting Card Set</h3>
+                <p>Both front and back designs of professional visiting card with complementary design elements</p>
+                <div class="item-tags">
+                    <span class="tag">Complete Set</span>
+                    <span class="tag">Both Sides</span>
+                    <span class="tag">Professional</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Watermark Design -->
+        <div class="gallery-item branding">
+            <div class="image-container">
+                <img src="Header-watermark.png" alt="Professional Watermark Design">
+                <div class="image-overlay">
+                    <h4>Watermark</h4>
+                    <p>Brand Protection</p>
+                </div>
+            </div>
+            <div class="item-info">
+                <h3>Professional Watermark Design</h3>
+                <p>"Designed by TrustWay Digital" watermark used on all creative work for brand identification</p>
+                <div class="item-tags">
+                    <span class="tag">Watermark</span>
+                    <span class="tag">Branding</span>
+                    <span class="tag">Protection</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Document Sample 1 -->
+        <div class="gallery-item documents">
+            <div class="document-sample">
+                <i class="fas fa-file-contract"></i>
+                <h3>Bio-Data Sample</h3>
+                <p>Matrimonial Profile</p>
+            </div>
+            <div class="item-info">
+                <h3>Professional Marriage Bio-Data</h3>
+                <p>Well-structured matrimonial profile with proper sections for personal, family, and educational details</p>
+                <div class="item-tags">
+                    <span class="tag">Bio-Data</span>
+                    <span class="tag">Matrimonial</span>
+                    <span class="tag">Professional</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Document Sample 2 -->
+        <div class="gallery-item documents">
+            <div class="document-sample">
+                <i class="fas fa-file-pdf"></i>
+                <h3>Resume Sample</h3>
+                <p>Professional CV</p>
+            </div>
+            <div class="item-info">
+                <h3>Professional Resume/CV Format</h3>
+                <p>Modern resume format with proper sections for education, experience, skills, and achievements</p>
+                <div class="item-tags">
+                    <span class="tag">Resume</span>
+                    <span class="tag">CV</span>
+                    <span class="tag">Professional</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo Design -->
+        <div class="gallery-item branding">
+            <div class="image-container">
+                <img src="Trustwaydigital-logo.png" alt="TrustWay Digital Logo">
+                <div class="image-overlay">
+                    <h4>Company Logo</h4>
+                    <p>Brand Identity</p>
+                </div>
+            </div>
+            <div class="item-info">
+                <h3>TrustWay Digital Logo Design</h3>
+                <p>Feather-based logo symbolizing precision, trust, and digital expertise with clean modern design</p>
+                <div class="item-tags">
+                    <span class="tag">Logo</span>
+                    <span class="tag">Brand Identity</span>
+                    <span class="tag">Modern</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Promotional Poster -->
+        <div class="gallery-item posters">
+            <div class="image-container">
+                <img src="file_0000000055b871fd9761380a893280b9.png" alt="Business Promotion Poster">
+                <div class="image-overlay">
+                    <h4>Promotion Poster</h4>
+                    <p>Business Marketing</p>
+                </div>
+            </div>
+            <div class="item-info">
+                <h3>Business Promotion Poster</h3>
+                <p>Eye-catching promotional poster for business marketing with clear value proposition</p>
+                <div class="item-tags">
+                    <span class="tag">Promotion</span>
+                    <span class="tag">Marketing</span>
+                    <span class="tag">Business</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Notice -->
+    <div class="privacy-notice">
+        <i class="fas fa-shield-alt"></i>
+        <div>
+            <h3>Client Privacy & Confidentiality</h3>
+            <p>All client personal information is kept 100% confidential. Document samples shown here have all personal details removed or hidden for privacy protection. We never share client information without explicit permission.</p>
+            <p><strong>Note:</strong> All creative work includes "Designed by TrustWay Digital 🪶" watermark as part of our branding policy.</p>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="gallery-cta">
+        <div class="container">
+            <h2>Need Professional Design Services?</h2>
+            <p>Contact us for custom posters, social media creatives, branding designs, and professional document formatting</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/919286224731" class="btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp for Design Service
+                </a>
+                <a href="contact.html" class="btn-secondary">
+                    <i class="fas fa-palette"></i> View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Trustwaydigital-logo.png" alt="TrustWay Digital Logo" class="footer-logo-img">
+                <h3>TrustWay Digital</h3>
+                <p>Verified Digital Services</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="opportunities.html">Opportunities 2026</a></li>
+                    <li><a href="founder.html">Our Founder</a></li>
+                    <li><a href="proof.html">Proof & Authenticity</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fab fa-whatsapp"></i> 9286224731</p>
+                <p><i class="fas fa-envelope"></i> trustwaydigital@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Karnprayag, Uttarakhand</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TrustWay Digital. All rights reserved. | Designed by TrustWay Digital</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery Filter Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            // Filter functionality
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide gallery items based on filter
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // Initial animation for items
+            galleryItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, 100 + index * 50);
+            });
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
